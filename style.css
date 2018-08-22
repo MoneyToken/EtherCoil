@@ -1,0 +1,32 @@
+body {
+margin: 2em;
+/*width: 75%;*/
+text-align: justify;
+background-color: #FFFFFF;
+}
+
+div.image {
+text-align: center;
+margin-top: 3em;
+margin-bottom: 3em;
+}
+
+h1, h2 {
+text-align: center;
+color: navy;
+}
+
+h3,h4,h5,h6 {
+text-align: left;
+color: navy;
+}
+
+a {
+color: navy;
+text-decoration: underline;
+}
+
+a:hover {
+text-decoration: none;
+color: green;
+}
