@@ -1,12 +1,12 @@
 /*
-The sketch reads the 256-bit long hashes of transactions on Ethereum blockchain and uses them 
- to forge brand new deterministic artworks.   
- 
- Code inspired by Matt Pearson (http://zenbullets.com/), 
- written by Massimo Franceschet (https://twitter.com/HEX0x6C), 
- checked by Erick Calderon (@snowfro)
- for Art Blocks project (https://www.artblocks.io/).
- */
+ Welcome to EtherCoil, a generative art piece I designed for the Art Blocks project. EtherCoil is reading in real-time 
+ the block hashes of Ethereum blockchain and using them to forge artworks shaped as colored intertwined coils.  
+ For EtherCoil I took inspiration from the generative artworks of Matt Pearson (http://zenbullets.com/), 
+ who taught me how to use programming as poetry.
+ The original code is written in Processing and then translated in p5.js by me, aka HEX0x6C (https://twitter.com/HEX0x6C). 
+ I wrote this code for Art Blocks (https://www.artblocks.io/), a promising project to promote interactive generative artworks 
+ on the blockchain. I thank Erick Calderon (https://twitter.com/@artonblockchain) for all his support and enthusiasm.
+*/
 
 var a; // semi-major axis of the ellipse
 var b; // semi-minor axis of the ellipse
