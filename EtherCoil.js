@@ -22,7 +22,7 @@ var ncoils = 100; // number of coils
 var artNode = "0x_my_art_node_address" // write here your art node address 
 var homestead = "http://art-blocks-endpoints.whatsthescore.webfactional.com/homestead/"; // endpoint url
 var endpoint;
-var oldBlocknumber = 0; // old blocknumber
+var oldBlocknumber = -1; // old blocknumber
 var blocknumber; // current blocknumber
 var hash; // hash string
 var bin; // binary hash string
@@ -57,8 +57,9 @@ window.setInterval(function() {
 function pickJSON(json) {
   blocknumber = json.blocknumber;
   hash = json.hash;  
-  // if hash is null print QR code
+  // if there is a new block
   if (blocknumber > oldBlocknumber) {
+  // if hash is null print QR code
     if (hash === zero) {
       document.getElementById("hash").innerHTML = "INSERT COIN FOR A COIL!";
       console.log("Blocknumber:", blocknumber, "Hash:", hash);
