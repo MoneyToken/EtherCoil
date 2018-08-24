@@ -58,17 +58,16 @@ function pickJSON(json) {
   blocknumber = json.blocknumber;
   hash = json.hash;  
   // if hash is null print QR code
-  if (hash === zero) {
-    document.getElementById("hash").innerHTML = "INSERT COIN...";
-    console.log("Blocknumber:", blocknumber, "Hash:", hash);
-    background(255);
-    drawQR();
-  } else {
-  // if hash is not null and there is a new block print the coil and save it  
-    if (blocknumber > oldBlocknumber) {
+  if (blocknumber > oldBlocknumber) {
+    if (hash === zero) {
+      document.getElementById("hash").innerHTML = "INSERT COIN FOR A COIL!";
+      console.log("Blocknumber:", blocknumber, "Hash:", hash);
+      background(255);
+      drawQR();
+    } else {
+  // if hash is full print design
       console.log("Blocknumber:", blocknumber, "Hash:", hash);
       document.getElementById("hash").innerHTML = hash;
-      oldBlocknumber = blocknumber;
       // remove prefix
       hash = hash.substring(2, hash.length);
       // convert to bin
@@ -76,12 +75,13 @@ function pickJSON(json) {
       // draw coils
       background(255);
       drawCoils(ncoils);
-      // save the coil once
+      // save design (once)
       if (!saved) {
         saveCanvas("HashCoil"+blocknumber+".jpg");
         saved = true;
       }
     }
+    oldBlocknumber = blocknumber;
   }
 }
 
