@@ -51,7 +51,7 @@ function draw() {}
 // read JSON every 5 seconds
 window.setInterval(function() {
     loadJSON(endpoint, pickJSON)
-  }, 5000);
+  }, 2000);
 
 // pick and process JSON
 function pickJSON(json) {
