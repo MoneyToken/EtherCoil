@@ -78,7 +78,7 @@ function pickJSON(json) {
       drawCoils(ncoils);
       // save design (once)
       if (!saved) {
-        saveCanvas("HashCoil"+blocknumber+".jpg");
+        saveCanvas("HashCoil"+hash+".jpg");
         saved = true;
       }
     }
