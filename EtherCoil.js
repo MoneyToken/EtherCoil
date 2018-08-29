@@ -102,8 +102,10 @@ function drawCoils(n) {
   for (var i=0; i < n; i++) {
     a = 10;
     b = 10;
+    var seed = fib(i);
+    randomSeed(seed);
+    noiseSeed(seed);
     strokeWeight(random(2));
-    noiseSeed(fib(i));
     noi = hashRandom(100);
     var col = color(hashRandom(200), hashRandom(200), hashRandom(200));
     var alpha = hashRandom(200);
@@ -111,7 +113,6 @@ function drawCoils(n) {
 
     startTilt = radians(hashRandom(360));
     endTilt = radians(360 * 4 + hashRandom(360 * 4));
-    randomSeed(fib(i));
     stepTilt = radians(3 + hashRandom(100)/20);
 
     x = width/2  + a * cos(startTilt);
